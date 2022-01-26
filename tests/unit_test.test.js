@@ -1,15 +1,21 @@
-const assert = require('../src/core/assert/assert.js');
+const{it,describe} = require('mocha')
+const assert = require('assert');
 const sqr = require('../src/core/sqr/sqr.js')
-var User = require('../src/core/user/user.js')
 
-function main() {
-    assert('Pessoa' === 'Pessoa', 'Testing string')
+describe('Testing of types an values', () => {
+    it('Testing string', () => {
+        assert('Pessoa' === 'Pessoa')
+    })
 
-    assert(sqr(3) === 9, 'Testing sqr')
+    it('Testing sqr', () => {
+        assert(sqr(3) === 9)
+    })
 
-    var admin = new User('admin', '123456')
-    assert(admin.auth('admin', '123456'), 'Testing credentials auth')
-    assert(!admin.auth('admi', '123456'), 'Testing credentials invalid auth')
-}
+    it('Testing sqr 2', () => {
+        assert(sqr(5) === 25)
+    })
 
-main()
+    it('Testing double', () => {
+        assert(0.0 === 0.0)
+    })
+})
