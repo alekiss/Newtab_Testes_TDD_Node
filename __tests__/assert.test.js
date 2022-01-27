@@ -8,8 +8,7 @@ describe('Testing of assert', () => {
     })
 
     it('Testing assert string', () => {
-        expect(assert('Pessoa' === 'Pessoa'). toEqual(true)
-        )
+        expect(assert('Pessoa' === 'Pessoa')).toEqual(true)
     })
 
     it('Testing assert sqr', () => {
